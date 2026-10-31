@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: calibration
+      POSTGRES_PASSWORD: calibration
+      POSTGRES_DB: calibration
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U calibration"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+volumes:
+  postgres_data:
