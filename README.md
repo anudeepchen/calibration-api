@@ -29,7 +29,7 @@ Docker Compose. Docker is optional. No cloud account or API keys are required. C
 The final code review verified **57 passing PostgreSQL integration tests**, Ruff
 linting and formatting, fresh-database migrations, schema/model consistency, and
 live Uvicorn requests. Docker was unavailable during verification, so database
-checks used native PostgreSQL. One upstream TestClient deprecation warning remains.
+checks used native PostgreSQL.
 See [testing.md](testing.md#recorded-implementation-verification) for context.
 
 The API supports creating calibrations, adding/removing tags, searching with
